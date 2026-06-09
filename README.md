@@ -6,7 +6,7 @@
 
 ## Contexto del Proyecto
 
-Este repositorio contiene la resolucion analitica de practicas y evaluaciones de bases de datos basadas en el modelo relacional Pampero. El objetivo principal es demostrar el dominio del lenguaje de manipulacion de datos (DML) mediante el motor SQL, aplicando buenas practicas de consulta, optimizacion de filtros y resolucion de problemas comunes de agrupacion y sintaxis cruzada entre entornos MySQL y SQL Server.
+Este repositorio contiene la resolucion del parcial Nro 2 de bases de datos basadas en el modelo relacional Pampero. El objetivo principal es demostrar el dominio del lenguaje de manipulacion de datos (DML) mediante el motor SQL, aplicando buenas practicas de consulta, optimizacion de filtros y resolucion de problemas comunes de agrupacion y sintaxis cruzada entre entornos MySQL y SQL Server.
 
 ## Analisis Tecnico de las Consultas
 
