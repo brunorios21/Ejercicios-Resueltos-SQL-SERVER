@@ -1,4 +1,4 @@
--- 1 ¿Qué clientes compraron productos que son suministrados por proveedores que residen en la misma región que ellos? 
+--  ¿Qué clientes compraron productos que son suministrados por proveedores que residen en la misma región que ellos? 
 -- Mostrar ID, Nombre de la empresa, nombre del contacto y región. 
 -- Incluir en el resultado aquellos cuya región es NULL si la región del proveedor también es NULL. 
 -- Ordenar por región.
@@ -13,7 +13,7 @@ join Proveedores PV on PR.IDProveedor = PV.IDProveedor
 -- La condición agrupa el caso de igualdad normal y el caso donde AMBOS son nulos [cite: 405]
 where (c.Region = PV.Region or (c.Region is null and PV.Region is null ))
 order by c.Region;
--- 2. Calcular el total solicitado (en cantidades, y en importe total) en 2020,
+--  Calcular el total solicitado (en cantidades, y en importe total) en 2020,
 -- agrupado por categoría de producto (mostrar el nombre de la categoría).
 -- Calcular el importe total multiplicando Cantidad por el precio unitario
 select c.NombreCategoria,
@@ -26,7 +26,7 @@ join pedidos pd on dp.IDPedido = pd.IDPedido
 where pd.FechaPedido >= '20200101' and pd.FechaPedido < '20210101'
 group by c.NombreCategoria;
 
--- 3. Listar los clientes (ID y Nombre) que hayan realizado pedidos en la misma fecha, pero en diferentes años.
+--  Listar los clientes (ID y Nombre) que hayan realizado pedidos en la misma fecha, pero en diferentes años.
 
 select distinct c.IDCliente, c.NombreEmpresa
 from clientes c
@@ -56,7 +56,7 @@ where p.PrecioUnitario = (
 )
 order by pv.NombreEmpresa;
 
--- 5. Listar los clientes de Francia que realizaron pedidos durante el año 2021.
+--  Listar los clientes de Francia que realizaron pedidos durante el año 2021.
 -- Tener en cuenta que se deben mostrar TODOS los clientes de Francia. 
 -- Para los que hayan realizado pedidos durante el año 2021, 
 -- se deberá mostrar el último mes en el que realizaron un pedido, indicando el nombre del mes.
@@ -84,7 +84,7 @@ where c.pais = 'Francia'
 group by  c.NombreEmpresa
 order by c.NombreEmpresa;
     
--- 6. Realizar un reporte de las ventas realizadas por los representantes de ventas durante el ultimo año
+--  Realizar un reporte de las ventas realizadas por los representantes de ventas durante el ultimo año
 -- en que se registraron ventas en la base. los totales de ventas deberan estar agrupadas y mostradas por mes
 -- en orden cronologico. Los empleados deberan mostrar ordenados por apellido y luego por nombre.
 -- las columnas a mostrar son: Nombre, Apellido, mes VentasTotales.
